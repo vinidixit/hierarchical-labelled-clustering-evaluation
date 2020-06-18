@@ -3,7 +3,7 @@
 Evaluation codes and result to test labelling and clustering scores obtained from **Embedding based Generalized Closed Frequent Itemset Hierarchical Clustering** technique.
 
 What to expect -
-1. Hierarchical clusters for documents with overlapping labels. Technique is most suited for short documents with overlapping concepts. 
+1. Hierarchical clusters for documents with overlapping labels. Technique is most suited for short text documents (sentences/paragraphs) with overlapping concepts. 
 
 2. Its **iterative** setup to extract pair of clusters and outliers for *current pass* of documents. Clusters contain documents, those have strong associativity with respective cluster topics, whereas outliers showed weak features and associativity with mainstream clusters.
 
