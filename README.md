@@ -1,6 +1,6 @@
 # Hierarchical Labelled Clustering Evaluation
 
-Evaluation codes and result to test labelling and clustering scores obtained from **Embedding based Genralized Closed Frequent Itemset Hierarchical Clustering** technique.
+Evaluation codes and result to test labelling and clustering scores obtained from **Embedding based Generalized Closed Frequent Itemset Hierarchical Clustering** technique.
 
 What to expect -
 1. Hierarchical clusters for documents with overlapping labels. Technique is most suited for short documents with overlapping concepts. 
