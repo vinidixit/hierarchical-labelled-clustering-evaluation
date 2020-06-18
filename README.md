@@ -1,4 +1,4 @@
-# hierarchical-labelled-clustering-evaluation
+# Hierarchical Labelled Clustering Evaluation
 
 Evaluation codes and result to test labelling and clustering scores obtained from **Embedding based Genralized Closed Frequent Itemset Hierarchical Clustering** technique.
 
