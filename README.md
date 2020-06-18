@@ -13,12 +13,12 @@ What to expect -
     1. **Feature Processing**
         1. phrase extraction pass count
         2. Maximum features fraction
-        3. Embedding type - None, Fasttext, Bert
+        3. Embedding type  (None / Fasttext / Bert)
         4. Number of passes to form embedding clusters
         
     2. **Clustering**
         1. number of passes and support threshold fractions for each pass
-        2. corpus type  ("short/long")
+        2. corpus type  ("short"/"long")
         3. maximum overlapping labels (fraction)
         4. keep negative label scores (boolean)
     
@@ -28,7 +28,7 @@ What to expect -
         3. Number of positive pairs
         4. Number of negative pairs
         
-5. Evaluation setup for Reuters and ticket documents and logged using [MLFlow](https://mlflow.org/). Scoring metrics used to choose best parameters are -
+5. Evaluation setup for [Reuters](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/lyrl2004_rcv1v2_README.htm) and ticket documents and logged using [MLFlow](https://mlflow.org/). Scoring metrics used to choose best combination of parameters are -
     1. cluster assignment score
     2. label assignment score 
     3. precision @cluster
