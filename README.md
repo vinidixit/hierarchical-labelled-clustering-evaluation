@@ -3,7 +3,7 @@
 Evaluation codes and result to test labelling and clustering scores obtained from **Embedding based closed frequent itemset hierarchical clustering** technique.
 
 What to expect -
-1. hierarchical clusters for documents with labels
+1. hierarchical clusters for documents with overlapping labels. Technique is most suited for short documents with overlapping concepts.
 
 2. suggested **outlier** documents (as per current pass) and accommodate them to consider for main clusters in next iteration of new documents.
 
