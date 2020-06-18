@@ -28,7 +28,7 @@ What to expect -
         3. Number of positive pairs
         4. Number of negative pairs
         
-5. Evaluation setup for [Reuters](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/lyrl2004_rcv1v2_README.htm) and ticket documents and logged using [MLFlow](https://mlflow.org/). Scoring metrics used to choose best combination of parameters are -
+5. Evaluation setup for [Reuters](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/lyrl2004_rcv1v2_README.htm) and ticket (private) documents and logged using [MLFlow](https://mlflow.org/). Scoring metrics used to choose best combination of parameters are -
     1. cluster assignment score
     2. label assignment score 
     3. precision @cluster
