@@ -28,7 +28,7 @@ What to expect -
         3. Number of positive pairs
         4. Number of negative pairs
         
-5. Evaluation setup for Reuters and ticket documents and logged using *MLFlow*. Scoring metrics used to choose best parameters are -
+5. Evaluation setup for Reuters and ticket documents and logged using [MLFlow](https://mlflow.org/). Scoring metrics used to choose best parameters are -
     1. cluster assignment score
     2. label assignment score 
     3. precision @cluster
