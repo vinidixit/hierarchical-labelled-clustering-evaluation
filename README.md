@@ -13,7 +13,7 @@ What to expect -
     1. **Feature Processing**
         1. phrase extraction pass count
         2. Maximum features fraction
-        3. Embedding type  (None / Fasttext / Bert)
+        3. Embedding type  (None / [Fasttext](https://fasttext.cc/) / [Bert](https://github.com/UKPLab/sentence-transformers))
         4. Number of passes to form embedding clusters
         
     2. **Clustering**
