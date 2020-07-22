@@ -6,27 +6,14 @@ from reuters_evaluator import re_eval_mlflowrun
 
 import mlflow
 
-def workflow():
-    data_dir = '../sample_data/'
-    tickets_dir = data_dir + 'tickets_selected/'
-    reuters_dir = data_dir + 'reuters_selected/'
-    text_file = reuters_dir + '19961119_selected_df.pkl' #tickets_dir + 'subjects_df.pkl'
-
-    corpus_name = 'Reuters-text'
-    column_name = 'text' # None
-    corpus_type = 'long'
-    max_dup = 2
-    without_negative_label = True
-    max_features_frac = .20
-    embedding = 'fasttext'
-    num_embedding_passes = None
-
+def workflow(corpus_name, corpus_type, max_dup, embedding, num_embedding_passes):
+    
     _already_ran = mlflow.active_run() is not None
 
     if not _already_ran:
         mlflow.start_run()
 
-    fe_params_map, fe_metrics_map, fe_artifacts_map, feature_extracted_df = fe_mlflowrun(text_file, column_name)
+    fe_params_map, fe_metrics_map, fe_artifacts_map, feature_extracted_df = fe_mlflowrun(text_file)
 
     fs_params_map, fs_metrics_map, fs_artifacts_map, feature_selected_df = fs_mlflowrun(feature_extracted_df, \
                                                                                         max_features_frac, embedding, \
@@ -67,4 +54,29 @@ def workflow():
 
 
 if __name__ == '__main__':
-    workflow()
+    
+    # Avaliable hyperparamters for each step
+    corpus_type_ops = ['short', 'long']
+    lemmatization_ops = ['default', 'ticket']
+    label_ops = [False, True]
+    embedding_ops = [None, 'fasttext', 'sentbert']
+
+    max_dup_ops = [None, 1, 2, 3]
+    max_features_frac_ops = [None, 0.1, 0.2]
+    
+    ## data parameter setup for Reuters/Tickets datasets
+    data_dir = '../sample_data/'
+    tickets_dir = data_dir + 'tickets_selected/'
+    reuters_dir = data_dir + 'reuters_selected/'
+    text_file = reuters_dir + '19961119_selected_df.pkl' #tickets_dir + 'subjects_df.pkl'
+    
+    ## current parameters chosen for an experiment
+    corpus_name = 'Reuters-text'
+    corpus_type = 'long'
+    max_dup = 2
+    without_negative_label = True
+    max_features_frac = .20
+    embedding = 'fasttext'
+    num_embedding_passes = None
+    
+    workflow(corpus_name, corpus_type, max_dup, embedding, num_embedding_passes)
