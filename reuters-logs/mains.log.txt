@@ -1,0 +1,145 @@
+[nltk_data] Downloading package words to /Users/vdixit/nltk_data...
+[nltk_data]   Package words is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /Users/vdixit/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+Embedding chosen : fasttext
+Max_features:  390
+Encoding using fasttext..
+done.  0.0051  min
+
+Total initial singleton features: 2221
+
+
+Pass....: 1
+
+Pass done: Singular terms:  2109
+done in  0.1411  mins.
+
+
+Pass....: 2
+
+Pass done: Singular terms:  1827
+done in  0.2114  mins.
+
+
+Pass....: 3
+
+Pass done: Singular terms:  1426
+done in  0.2591  mins.
+
+
+Pass....: 4
+
+Pass done: Singular terms:  900
+done in  0.2789  mins.
+
+
+Postprocessing.....
+
+Multiple leaders assignment found:  {'mln_tonne': {'mln', 'tonne'}, 'name_new': {'new', 'name'}, 'buy_back': {'back', 'buy'}, 'free_trade': {'free', 'trade'}, 'insurance_head': {'insurance', 'head'}, 'percent_low': {'percent', 'low'}, 'strike_end': {'strike', 'end'}}
+
+Postprocessing done: Singular terms:  885
+Total time taken in fitting:  0.9832  mins.
+
+tfidf_matrix shape: (1951, 89)
+
+Initial features:  2221
+Selected features:  89
+Input docs count : 1951
+2020-06-20 23:16:07,367 : CFIClustering : ***corpus_size: 3077
+2020-06-20 23:16:07,370 : CFIClustering : ***max_freq: 133
+2020-06-20 23:16:07,370 : CFIClustering : ***max_freq item: (('parent_result',), 133)
+2020-06-20 23:16:07,370 : CFIClustering : {1: 2, 2: 2, 3: 2, 4: 2, 5: 2}
+2020-06-20 23:16:07,371 : CFIClustering : outlier threshold: 2
+2020-06-20 23:16:07,371 : CFIClustering : Initializing 1st level itemsets..
+2020-06-20 23:16:07,372 : CFIClustering : Done. Total: 89, Frequent:89, fi_nodes:90 
+
+2020-06-20 23:16:07,373 : CFIClustering : Generating 2nd level itemsets..
+2020-06-20 23:16:13,723 : CFIClustering : Done. new_freq_itemsets:420 out of 1164 itemsets, total_cfi_nodes:510
+
+2020-06-20 23:16:13,723 : CFIClustering : Generating 3rd level itemsets..
+2020-06-20 23:16:16,913 : CFIClustering : Done. new_freq_itemsets:37 out of 242 itemsets, total_cfi_nodes:517
+
+2020-06-20 23:16:16,913 : CFIClustering : Generating 4th level itemsets..
+2020-06-20 23:16:16,930 : CFIClustering : Done. new_freq_itemsets:2 out of 2 itemsets, total_cfi_nodes:515
+
+2020-06-20 23:16:16,930 : CFIClustering : Generating 5th level itemsets..
+2020-06-20 23:16:16,930 : CFIClustering : Done. new_freq_itemsets:0 out of 0 itemsets, total_cfi_nodes:515
+
+2020-06-20 23:16:16,930 : CFIClustering : Get label for each doc...
+2020-06-20 23:16:17,855 : CFIClustering : Total unmatched docs:257
+2020-06-20 23:16:17,865 : CFIClustering : Postprocessing...
+Singletons : 247
+2020-06-20 23:16:17,874 : CFIClustering : Final clusters Count : 514, Total docs assigned: 1704, Outliers/unassigned: 247.
+
+
+Postprocessing extra labels ..
+Maximum clusters allowed per doc:  11
+Initial CLusters count : 514
+Total documents count : 1951
+Total initial assigned documents count : 1694
+
+Total clusters after removing extra labels:  514
+Newly unassigned doc count after removing extra labels:  0
+Newly unassigned doc % out of earlier assigned docs: 0.000 % and total docs: 0.000 %
+Total documents : 1951
+Noisy documents : 10
+Selected documents : 1941
+Unassigned doc count: 247 and 12.725 %
+Total assigned docs: 1694, 87.275 %
+Positive assigned documents:  1656
+Positive assigned out of assigned docs : 97.757 %, out of selected docs: 85.317 %, and out of all docs: 84.880 %.
+
+ ========== Evaluating predicted label clusters.. ==========
+Using base corpus as : labels
+Disconnected clusters counts:  1 [1694]
+Setting prediction tests on :  categories
+Total pos pairs generated : 1433971
+pos pairs count: 1433971, true_positives: 429572, false_negatives: 1004399
+Evaluator pos pairs : 1011.029 sec
+
+Total neg pairs generated : 0
+neg pairs count: 0, true_negatives: 0, false_positives: 0
+
+Evaluator neg pairs: 0.135 sec
+---------------------------------------------
+Using base corpus as : selected_labels
+Disconnected clusters counts:  1 [1694]
+Setting prediction tests on :  categories
+Total pos pairs generated : 1433971
+pos pairs count: 1433971, true_positives: 429572, false_negatives: 1004399
+Evaluator pos pairs : 812.674 sec
+
+Total neg pairs generated : 0
+neg pairs count: 0, true_negatives: 0, false_positives: 0
+
+Evaluator neg pairs: 0.129 sec
+
+
+
+ ========== Evaluating Reuters clusters by categories.. ==========
+Using base corpus as : categories
+Disconnected clusters counts:  4 [1930, 19, 1, 1]
+Setting prediction tests on :  labels
+Total pos pairs generated : 1861656
+pos pairs count: 1861656, true_positives: 1788546, false_negatives: 73110
+Evaluator pos pairs : 4006.112 sec
+
+Total neg pairs generated : 40569
+neg pairs count: 16849, true_negatives: 16228, false_positives: 621
+
+Evaluator neg pairs: 82.639 sec
+---------------------------------------------
+Using base corpus as : categories
+Disconnected clusters counts:  4 [1930, 19, 1, 1]
+Setting prediction tests on :  selected_labels
+Total pos pairs generated : 1861656
+pos pairs count: 1861656, true_positives: 1789095, false_negatives: 72561
+Evaluator pos pairs : 3589.948 sec
+
+Total neg pairs generated : 40569
+neg pairs count: 16849, true_negatives: 16233, false_positives: 616
+
+Evaluator neg pairs: 78.555 sec
+159.722 mins.
