@@ -8,7 +8,7 @@ disclaimer_cleaner = Cleaner('cleaning/model/disclaimer.jl')
 def custom_clean_text(text):
     text = re.sub("([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)", "[EMAILID-PATTERN]", text)
     text = re.sub('https?://[^\s<>"]+|www\.[^\s<>"]+', "[URL]", text)
-    text = re.sub(r'\[[^ ]*\]', '', text)  # added by Vini to remove text in brackets
+    text = re.sub(r'\[[^ ]*\]', '', text)  # added to remove text in brackets
 
     txt_cleaner = TextBasedCleaner(text)
     txt_cleaner.clean_text_signoff_signature()
@@ -19,8 +19,8 @@ def custom_clean_text(text):
     txt_cleaner.clean_text_code_constructs()
     text = txt_cleaner.get_text()
     text = re.sub('\d+', '<NUM>', text)
-    text = text.replace('\n', ' ')  # added by Vini
-    text = text.replace('[ ]+', ' ')  # added by Vini
+    text = text.replace('\n', ' ')  
+    text = text.replace('[ ]+', ' ')  
 
     return text.strip()
 
