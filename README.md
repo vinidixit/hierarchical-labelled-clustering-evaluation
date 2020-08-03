@@ -39,4 +39,9 @@ What to expect -
     8. precision @outlier
     9. FPR @outlier
     10. Number of disconnected clusters
-    
+ 
+## Flow chart of the working system
+This repository works at 3rd component level (highlighted in yellow)for evaluating our GCFI++ model.
+
+
+ ![FLow chart](images/flow_chart.png)
