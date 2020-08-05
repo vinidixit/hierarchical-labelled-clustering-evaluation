@@ -1,8 +1,14 @@
 # Hierarchical Labelled Clustering Evaluation
 
-Evaluation codes and result to test labelling and clustering scores obtained from [**Embedding based Generalized Closed Frequent Itemset Hierarchical Clustering**](https://github.com/vinidixit/hierarchical-labelled-clustering) technique.
+Evaluation codes and results to test labelling and clustering scores obtained from [**Embedding based Generalized Closed Frequent Itemset Hierarchical Clustering**](https://github.com/vinidixit/hierarchical-labelled-clustering) technique.
 
-What to expect -
+### Flow chart of the working system
+This repository works at 3rd component level (highlighted in yellow)for evaluating our GCFI++ model.
+
+![FLow chart](images/flow_chart.png)
+ 
+ 
+**What to expect -**
 1. Hierarchical clusters for documents with overlapping labels. Technique is most suited for short text documents (sentences/paragraphs) with overlapping concepts. 
 
 2. Its **iterative** setup to extract pair of clusters and outliers for *current pass* of documents. Clusters contain documents, those have strong associativity with respective cluster topics, whereas outliers showed weak features and associativity with mainstream clusters.
@@ -40,8 +46,4 @@ What to expect -
     9. FPR @outlier
     10. Number of disconnected clusters
  
-## Flow chart of the working system
-This repository works at 3rd component level (highlighted in yellow)for evaluating our GCFI++ model.
 
-
- ![FLow chart](images/flow_chart.png)
