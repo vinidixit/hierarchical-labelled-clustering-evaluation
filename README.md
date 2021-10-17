@@ -2,6 +2,9 @@
 
 Evaluation codes and results to test labelling and clustering scores obtained from [**Embedding based Generalized Closed Frequent Itemset Hierarchical Clustering**](https://github.com/vinidixit/hierarchical-labelled-clustering) technique.
 
+### Data for evaluation
+Evaluations are done on a publically available Reuters [dataset](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/lyrl2004_rcv1v2_README.htm) and private tickets dataset.
+
 ### Flow chart of the working system
 This repository works at 3rd component level (highlighted in yellow)for evaluating our GCFI++ model.
 
