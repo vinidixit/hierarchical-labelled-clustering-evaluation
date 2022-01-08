@@ -1,6 +1,7 @@
 # Hierarchical Labelled Clustering Evaluation
 
 Evaluation codes and results to test labelling and clustering scores obtained from [**Embedding based Generalized Closed Frequent Itemset Hierarchical Clustering**](https://github.com/vinidixit/hierarchical-labelled-clustering) technique.
+Research paper link https://dl.acm.org/doi/10.1145/3493700.3493727
 
 ### Data for evaluation
 Evaluations are done on a publically available Reuters [dataset](http://www.ai.mit.edu/projects/jmlr/papers/volume5/lewis04a/lyrl2004_rcv1v2_README.htm) and a private tickets dataset.
